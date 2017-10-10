@@ -1,11 +1,19 @@
 function [outStruct] = phaseToQ(f,x_raw,y_raw)
     
     x = x_raw-mean(x_raw);
-    y = y_raw-mean(y_raw);
     
-    r2 = x.^2+y_raw.^2;
+    y_shift = 0;
+    if mean(y_raw)>y_raw(1)
+        y_shift = min(y_raw);
+    else
+        y_shift = max(y_raw);
+    end
     
-    theta = atan(x./-abs(y_raw));
+    y = y_raw-y_shift;
+    
+    r2 = x.^2+y.^2;
+    %r2 = msbackadj(f,r2,'WindowSize',50,'StepSize',100);
+    theta = atan(x./abs(y));
     %theta = medfilt1(theta,3);
     
     
