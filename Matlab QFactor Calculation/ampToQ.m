@@ -21,6 +21,7 @@ function [ outStruct ] = ampToQ(f,x_raw,y_raw)
     
     subplot(2,2,3);
     plot(f,r,f,ones(length(f))*max(r)/2);
+    
     legend('admittance','line at half max');
     
 end

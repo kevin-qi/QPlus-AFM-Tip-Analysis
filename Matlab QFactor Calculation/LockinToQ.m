@@ -16,4 +16,13 @@ function [outStruct] = LockinToQ(file)
     
     outStruct.ampFWHM = fromAmp.FWHM;
     outStruct.ResonanceFrequency = fromAmp.res;
+
+    fid = fopen(strcat(extractBefore(file,'.xlsx'),'.txt'),'wt');
+
+    fprintf(fid, strcat('phaseQ: ',num2str(outStruct.phaseQ),'\n'));
+    fprintf(fid, strcat('ampQ: ',num2str(outStruct.ampQ),'\n'));
+    fprintf(fid, strcat('FWHM: ',num2str(outStruct.ampFWHM),'\n'));
+    fprintf(fid, strcat('Resonance Frequency: ',num2str(outStruct.ResonanceFrequency),'\n'));
+
+    fclose(fid)
 end
