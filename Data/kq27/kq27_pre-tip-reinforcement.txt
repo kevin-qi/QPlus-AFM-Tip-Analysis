@@ -1,0 +1,6 @@
+phaseQ:-1845.1542
+ampQ:2039.1501
+FWHM:14.6983
+Resonance Frequency:29972
+
+No tip/tuning fork reinforcement

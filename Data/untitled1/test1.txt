@@ -1,0 +1,4 @@
+phaseQ:-27.2108
+ampQ:NaN
+FWHM:NaN
+Resonance Frequency:30619
