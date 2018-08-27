@@ -1,0 +1,4 @@
+phaseQ:-1915.8988
+ampQ:1935.1461
+FWHM:15.7748
+Resonance Frequency:30526.5

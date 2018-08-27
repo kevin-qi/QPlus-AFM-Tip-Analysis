@@ -9,9 +9,7 @@ function [ outStruct ] = ampToQ(f,x_raw,y_raw)
     end
     
     y = y_raw-y_shift;
-    
     r = (x.^2+y.^2);
-    
     %r = msbackadj(f,r,'WindowSize',50,'StepSize',100);
     outStruct = qfactor(f,r);
     
